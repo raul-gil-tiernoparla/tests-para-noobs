@@ -25,4 +25,14 @@ public class CalculadoraTest {
         assertEquals(expected, calc.sumar(numero1, numero2));
     }
 
+    @Test
+    public void tresSumarSieteEsDiez() {
+
+        int expected = 10;
+        int numero1 = 3, numero2 = 7;
+        Calculadora calc = new Calculadora();
+
+        assertTrue("Tres mas siete debería ser 10", expected == calc.sumar(numero1, numero2));
+    }
+
 }
