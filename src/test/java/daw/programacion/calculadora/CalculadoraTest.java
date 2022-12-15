@@ -3,6 +3,7 @@ package daw.programacion.calculadora;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
+
 public class CalculadoraTest {
 
     @Test
@@ -33,6 +34,16 @@ public class CalculadoraTest {
         Calculadora calc = new Calculadora();
 
         assertTrue("Tres mas siete debería ser 10", expected == calc.sumar(numero1, numero2));
+    }
+
+    @Test
+    public void tresSumarSieteNoEsCien() {
+
+        int expected = 100;
+        int numero1 = 3, numero2 = 7;
+        Calculadora calc = new Calculadora();
+
+        assertFalse("Tres mas siete no debería ser 100", expected == calc.sumar(numero1, numero2));
     }
 
 }
